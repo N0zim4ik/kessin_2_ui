@@ -3,182 +3,109 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(
     MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: Column(
-          children: [
-            Expanded(
-              flex: 2,
-              child: Container(
-                margin: EdgeInsets.only(
-                  top: 30,
-                ),
-                child: Column(
-                  children: [
-                    Text(
-                      'Select your avatar',
-                      style: TextStyle(
-                        fontSize: 25,
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.only(
-                        top: 10,
-                      ),
-                      height: 150,
-                      width: 150,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Colors.red,
-                      ),
-                      child: Image(
-                        image: NetworkImage(
-                            'https://cdn-icons-png.flaticon.com/512/4128/4128176.png'),
-                      ),
-                    ),
-                  ],
-                ),
+        body: Center(
+          child: Container(
+            height: double.infinity,
+            width: double.infinity,
+            decoration:  BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: [
+                  Colors.green.shade900,
+                  Colors.lightGreen.shade300,
+                ],
               ),
             ),
-            Expanded(
-              flex: 4,
-              child: Row(
+            child: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Expanded(
-                    child: Column(
-                      children: [
-                        Expanded(
-                          child: Container(
-                            margin: EdgeInsets.only(
-                              top: 10,
-                            ),
-                            height: 70,
-                            width: 70,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: Colors.red,
-                            ),
-                            child: Image(
-                              image: NetworkImage(
-                                  'https://cdn-icons-png.flaticon.com/512/145/145843.png'),
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          child: Container(
-                            margin: EdgeInsets.only(
-                              top: 10,
-                            ),
-                            height: 70,
-                            width: 70,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: Colors.red,
-                            ),
-                            child: Image(
-                              image: NetworkImage(
-                                  'https://cdn-icons-png.flaticon.com/512/201/201634.png'),
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          child: Container(
-                            margin: EdgeInsets.only(
-                              top: 10,
-                            ),
-                            height: 70,
-                            width: 70,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: Colors.red,
-                            ),
-                            child: Image(
-                              image: NetworkImage(
-                                  'https://cdn-icons-png.flaticon.com/512/2102/2102633.png'),
-                            ),
-                          ),
-                        ),
-                      ],
+                  Center(
+                    child: Padding(
+                      padding: const EdgeInsets.only(
+                        bottom: 20,
+                        right: 280,
+                      ),
+                      child: Text(
+                        "#FF2E4C",
+                        style: TextStyle(color: Colors.white),
+                      ),
                     ),
                   ),
-                  Expanded(
-                    child: Column(
-                      children: [
-                        Expanded(
-                          child: Container(
-                            margin: EdgeInsets.only(
-                              top: 10,
+                  Stack(
+                    children: [
+                      Container(
+                        height: 300,
+                        width: 300,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          gradient: LinearGradient(
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                            colors: [
+                              Colors.green.shade900,
+                              Colors.lightGreen.shade300,
+                            ],
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 215.0, left: 215),
+                        child: Container(
+                          height: 80,
+                          width: 80,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            gradient: LinearGradient(
+                              begin: Alignment.topLeft,
+                              end: Alignment.bottomRight,
+                              colors: [
+                                Colors.green.shade900,
+                                Colors.lightGreen.shade300,
+                              ],
                             ),
-                            height: 70,
-                            width: 70,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: Colors.red,
-                            ),
-                            child: Image(
-                              image: NetworkImage(
-                                  'https://cdn-icons-png.flaticon.com/512/706/706816.png'),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(7.5),
+                            child: Container(
+                              height: 30,
+                              width: 30,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                border:
+                                    Border.all(width: 2.7, color: Colors.white),
+                              ),
+                              child: const Center(
+                                  child: Text(
+                                "140°",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 18),
+                              )),
                             ),
                           ),
                         ),
-                        Expanded(
-                          child: Container(
-                            margin: EdgeInsets.only(
-                              top: 10,
-                            ),
-                            height: 70,
-                            width: 70,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: Colors.red,
-                            ),
-                            child: Image(
-                              image: NetworkImage(
-                                  'https://cdn-icons-png.flaticon.com/512/1144/1144709.png'),
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          child: Container(
-                            margin: EdgeInsets.only(
-                              top: 10,
-                            ),
-                            height: 70,
-                            width: 70,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: Colors.red,
-                            ),
-                            child: Image(
-                              image: NetworkImage(
-                                  'https://cdn-icons-png.flaticon.com/512/2202/2202112.png'),
-                            ),
-                          ),
-                        ),
-                      ],
+                      ),
+                    ],
+                  ),
+                  Center(
+                    child: const Padding(
+                      padding: EdgeInsets.only(
+                        top: 20,
+                        left: 280,
+                      ),
+                      child: Text(
+                        "#1E2A78",
+                        style: TextStyle(color: Colors.white),
+                      ),
                     ),
                   ),
                 ],
               ),
             ),
-            Expanded(
-              flex: 1,
-              child: Container(
-                margin: EdgeInsets.symmetric(
-                  vertical: 30,
-                  horizontal: 80,
-                ),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(30),
-                  color: Colors.blue,
-                ),
-                child: Center(
-                    child: Text(
-                  'SELECT',
-                  style: TextStyle(color: Colors.white, fontSize: 20),
-                )),
-              ),
-            ),
-          ],
+          ),
         ),
       ),
     ),
