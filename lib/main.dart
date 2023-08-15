@@ -5,106 +5,77 @@ void main() {
     MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: Center(
-          child: Container(
-            height: double.infinity,
-            width: double.infinity,
-            decoration:  BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-                colors: [
-                  Colors.green.shade900,
-                  Colors.lightGreen.shade300,
-                ],
-              ),
-            ),
-            child: Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
+        body: Container(
+          child: Column(
+            children: [
+              Row(
                 children: [
-                  Center(
-                    child: Padding(
-                      padding: const EdgeInsets.only(
-                        bottom: 20,
-                        right: 280,
-                      ),
-                      child: Text(
-                        "#FF2E4C",
-                        style: TextStyle(color: Colors.white),
+                  Padding(
+                    padding:
+                        const EdgeInsets.only(left: 90, top: 60, bottom: 40),
+                    child: Container(
+                      width: 55,
+                      height: 55,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Color(0xFFE21C34),
                       ),
                     ),
                   ),
-                  Stack(
-                    children: [
-                      Container(
-                        height: 300,
-                        width: 300,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          gradient: LinearGradient(
-                            begin: Alignment.topLeft,
-                            end: Alignment.bottomRight,
-                            colors: [
-                              Colors.green.shade900,
-                              Colors.lightGreen.shade300,
-                            ],
-                          ),
-                        ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 25),
+                    child: Text(
+                      '#E21C34',
+                      style: TextStyle(
+                        color: Colors.grey,
+                        fontSize: 20,
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 215.0, left: 215),
-                        child: Container(
-                          height: 80,
-                          width: 80,
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            gradient: LinearGradient(
-                              begin: Alignment.topLeft,
-                              end: Alignment.bottomRight,
-                              colors: [
-                                Colors.green.shade900,
-                                Colors.lightGreen.shade300,
-                              ],
-                            ),
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(7.5),
-                            child: Container(
-                              height: 30,
-                              width: 30,
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                border:
-                                    Border.all(width: 2.7, color: Colors.white),
-                              ),
-                              child: const Center(
-                                  child: Text(
-                                "140°",
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 18),
-                              )),
-                            ),
-                          ),
-                        ),
-                      ),
+                    ),
+                  )
+                ],
+              ),
+              Container(
+                height: 300,
+                width: 300,
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                    colors: [
+                      Color(0xFFE21C34),
+                      Color(0xFF500B28),
                     ],
                   ),
-                  Center(
-                    child: const Padding(
-                      padding: EdgeInsets.only(
-                        top: 20,
-                        left: 280,
-                      ),
-                      child: Text(
-                        "#1E2A78",
-                        style: TextStyle(color: Colors.white),
+                  borderRadius: BorderRadius.circular(
+                    10,
+                  ),
+                ),
+              ),
+              Row(
+                children: [
+                  Padding(
+                    padding:
+                        const EdgeInsets.only(left: 260, right: 25, top: 10),
+                    child: Text(
+                      '#500B28',
+                      style: TextStyle(color: Colors.grey, fontSize: 20),
+                    ),
+                  ),
+                  Padding(
+                    padding:
+                        const EdgeInsets.only(left: 10, top: 60, bottom: 40),
+                    child: Container(
+                      width: 55,
+                      height: 55,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Color(0xFF500B28),
                       ),
                     ),
                   ),
                 ],
               ),
-            ),
+            ],
           ),
         ),
       ),
